@@ -1,11 +1,13 @@
 ﻿using Entities.DTOs.Others;
+using Entities.Entities.Users;
+using Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Entities.DTOs.UserDtos
 {
-    public class UserDto : BaseDto<UserDto, User>, IValidatableObject
+    public class UserDto : BaseDto<UserDto, User,long>, IValidatableObject
     {
         [Required]
         [StringLength(100)]

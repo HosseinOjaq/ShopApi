@@ -1,5 +1,5 @@
 ﻿using Common;
-using Entities;
+using Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

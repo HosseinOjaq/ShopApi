@@ -1,12 +1,14 @@
 ﻿using Entities.DTOs.Others;
+using Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Entities.DTOs.UsersDtos.Admin
 {
-    public class CreateUserAdminDto : BaseDto<CreateUserAdminDto, User>, IValidatableObject
+    public class CreateUserAdminDto : BaseDto<CreateUserAdminDto, User, long>, IValidatableObject
     {
+
         [Required]
         [StringLength(100)]
         public string UserName { get; set; }

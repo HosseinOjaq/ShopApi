@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Entities.Entities.Users;
+using Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;

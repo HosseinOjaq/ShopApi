@@ -1,11 +1,13 @@
 ﻿using Common;
 using Data.Contracts;
-using Entities;
+using Entities.Products;
 
 namespace Data.Repositories
 {
     public class ProductFileRepository : Repository<ProductFile>, IProductFileRepository, IScopedDependency
     {
-        public ProductFileRepository(ApplicationDbContext dbContext) : base(dbContext) { }
+        public ProductFileRepository(ApplicationDbContext dbContext) : base(dbContext)
+        {
+        }
     }
 }

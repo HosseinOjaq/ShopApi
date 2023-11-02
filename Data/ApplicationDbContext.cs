@@ -1,5 +1,8 @@
-﻿using Common.Utilities;
+﻿using Common;
+using Common.Utilities;
 using Entities;
+using Entities.Entities.Users;
+using Entities.Users;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -8,8 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace Data
-{
-    public class ApplicationDbContext : IdentityDbContext<User, Role, int>
+{          
+    public class ApplicationDbContext : IdentityDbContext<User, Role, long>, IScopedDependency
     {
         public ApplicationDbContext(DbContextOptions options)
             : base(options) { }

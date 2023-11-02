@@ -1,6 +1,5 @@
 ﻿using Common;
 using Data.Repositories;
-using Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,7 +11,8 @@ using WebFramework.Api;
 using WebFramework.Filters;
 using Microsoft.EntityFrameworkCore;
 using Entities.DTOs.UserDtos;
-using MyApi.Models.UserProfile;
+using Entities.Entities.Users;
+using Entities.Users;
 
 namespace Api.Admin.Controllers.v1
 {
@@ -79,7 +79,6 @@ namespace Api.Admin.Controllers.v1
             var user = new User
             {
                 UserName = userDto.UserName,
-                Age = userDto.Age,
                 Email = userDto.Email,
                 FullName = userDto.FullName
             };
@@ -88,11 +87,10 @@ namespace Api.Admin.Controllers.v1
         }
 
         [HttpPut]
-        public virtual async Task<ApiResult> Update(int id, CreateUserDto user, CancellationToken cancellationToken)
+        public virtual async Task<ApiResult> Update(int id, User user, CancellationToken cancellationToken)
         {
             var updateUser = await userManager.FindByIdAsync(id.ToString());
             updateUser.FullName = user.FullName;
-            updateUser.Age = user.Age;
             updateUser.NormalizedUserName = user.NormalizedUserName;
             updateUser.Gender = user.Gender;
             updateUser.PhoneNumber = user.PhoneNumber;

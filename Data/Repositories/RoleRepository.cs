@@ -1,6 +1,7 @@
 ﻿using Common;
 using Data.Contracts;
 using Entities;
+using Entities.Entities.Users;
 using System.Collections.Generic;
 using System.Linq;
 

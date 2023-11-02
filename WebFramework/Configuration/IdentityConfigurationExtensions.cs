@@ -3,6 +3,8 @@ using Entities;
 using Common;
 using Microsoft.AspNetCore.Identity;
 using Data;
+using Entities.Entities.Users;
+using Entities.Users;
 
 namespace WebFramework.Configuration
 {

@@ -49,7 +49,7 @@ namespace Data.Repositories
         public async Task<string> UploadFile(IFormFile file)
         {
             var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
-            var uploadFilePath = Path.Combine(env.ContentRootPath, "wwwroot", "Uploads", "Others");
+            var uploadFilePath = Path.Combine(env.ContentRootPath, "wwwroot", "Uploads", "Others", fileName);
             using (var stream = new FileStream(uploadFilePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);

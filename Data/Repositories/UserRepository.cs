@@ -1,7 +1,7 @@
 ﻿using Common;
 using Common.Exceptions;
 using Common.Utilities;
-using Entities;
+using Entities.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading;

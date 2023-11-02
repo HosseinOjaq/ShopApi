@@ -139,7 +139,7 @@ public class CreateUserRequestExample : IExamplesProvider<UserDto>
             Age = 25,
             UserName = "hosseinojaq",
             Email = "hosseinojaq97@gmail.com",
-            Gender = Entities.GenderType.Male,
+            Gender = Entities.Users.GenderType.Male,
             Password = "1234567"
         };
     }
@@ -155,7 +155,7 @@ public class CreateUserResponseExample : IExamplesProvider<UserDto>
             Age = 25,
             UserName = "hosseinojaq",
             Email = "hosseinojaq97@gmail.com",
-            Gender = Entities.GenderType.Male,
+            Gender = Entities.Users.GenderType.Male,
             Password = "1234567"
         };
     }

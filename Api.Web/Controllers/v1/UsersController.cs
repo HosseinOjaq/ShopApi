@@ -1,6 +1,5 @@
 ﻿using Common.Exceptions;
 using Data.Repositories;
-using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +14,8 @@ using Entities.DTOs.UsersDtos.Admin;
 using Entities.DTOs.Token;
 using Microsoft.AspNetCore.Cors;
 using WebFramework.Filters;
+using Entities.Entities.Users;
+using Entities.Users;
 
 namespace MyApi.Controllers.v1
 {

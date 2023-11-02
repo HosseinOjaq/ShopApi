@@ -1,5 +1,6 @@
 ﻿using Data.Repositories;
 using Entities;
+using Entities.Entities.Users;
 using System.Collections.Generic;
 
 namespace Data.Contracts
